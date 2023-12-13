@@ -1,0 +1,57 @@
+<templateSet group="Dart">
+  <template name="nbui_paddingOnly" value="padding:  const EdgeInsets.only($var$)" description="nb_paddingOnly" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_boxBorder" value="  BoxDecoration(&#10;            color: $color$,&#10;            borderRadius: BorderRadius.$method$,&#10;          )" description="BoxDecoration初始化" toReformat="false" toShortenFQNames="true">
+    <variable name="color" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="method" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_sizeWidth" value=" const SizedBox(&#10;                    width: $width$,&#10;                  )" description="SizedBoxWidth" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_sizeHeight" value=" const SizedBox(&#10;                    height: $height$,&#10;                  )" description="SizedBoxHeight" toReformat="false" toShortenFQNames="true">
+    <variable name="height" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_marginOnly" value="margin:  const EdgeInsets.only($var$)" description="nb_marginOnly" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_listView_builder" value="ListView.builder(&#10;          itemCount: $count$,&#10;          itemBuilder: (context, index) {&#10;            return $view$;&#10;          },&#10;        )" description="ListView.builder(           itemCount: 1,           itemBuilder: (context, index) {             return Text('hello world');           },         )," toReformat="false" toShortenFQNames="true">
+    <variable name="count" expression="dartListVariable()" defaultValue="1" alwaysStopAt="true" />
+    <variable name="view" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_TextField_templates" value="TextField(&#10;                              maxLength: $length$,&#10;                              //隐藏计算器&#10;                              buildCounter: (BuildContext context,&#10;                                  {int? currentLength,&#10;                                    int? maxLength,&#10;                                    bool? isFocused}) =&gt;&#10;                              null,&#10;                              onChanged: (value) {&#10;&#10;                              },&#10;                              style: const TextStyle(&#10;                                fontSize: $size$,&#10;                              ),&#10;                              decoration: InputDecoration(&#10;                              contentPadding:const EdgeInsets.all(0),&#10;                                hintText: $placeholder$,&#10;                                hintStyle: const TextStyle(color: Colors.grey),&#10;                                border:const OutlineInputBorder(&#10;                            borderSide: BorderSide.none&#10;                        ),&#10;                              ),&#10;                            )," description="" toReformat="false" toShortenFQNames="true">
+    <variable name="length" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="size" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="placeholder" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_ListView_group" value="ListView.builder(&#10;      itemCount: $groupLength$,&#10;      itemBuilder: (context, section) {&#10;        return Column(&#10;          crossAxisAlignment: CrossAxisAlignment.start,&#10;          children: [&#10;            ListTile(&#10;              title: Text($title$),&#10;            ),&#10;            ListView.separated(&#10;              shrinkWrap: true,&#10;              physics: ClampingScrollPhysics(),&#10;              itemCount: $length$,&#10;              separatorBuilder: (context, index) =&gt; Divider(),&#10;              itemBuilder: (context, index) {&#10;                return ListTile(&#10;                  title: Text($item$),&#10;                );&#10;              },&#10;            ),&#10;          ],&#10;        );&#10;      },&#10;    )" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="groupLength" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="length" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="item" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+</templateSet>
