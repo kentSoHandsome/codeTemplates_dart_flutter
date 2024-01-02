@@ -1,5 +1,5 @@
 <templateSet group="Dart">
-  <template name="nbui_paddingOnly" value="padding:  const EdgeInsets.only($var$)" description="nb_paddingOnly" toReformat="false" toShortenFQNames="true">
+  <template name="nbui_paddingOnly" value="padding:  EdgeInsets.only($var$)" description="nb_paddingOnly" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
@@ -12,19 +12,19 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="nbui_sizeWidth" value=" const SizedBox(&#10;                    width: $width$,&#10;                  )" description="SizedBoxWidth" toReformat="false" toShortenFQNames="true">
+  <template name="nbui_sizeWidth" value="  SizedBox(&#10;                    width: $width$,&#10;                  )" description="SizedBoxWidth" toReformat="false" toShortenFQNames="true">
     <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="nbui_sizeHeight" value=" const SizedBox(&#10;                    height: $height$,&#10;                  )" description="SizedBoxHeight" toReformat="false" toShortenFQNames="true">
+  <template name="nbui_sizeHeight" value="  SizedBox(&#10;                    height: $height$,&#10;                  )" description="SizedBoxHeight" toReformat="false" toShortenFQNames="true">
     <variable name="height" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="nbui_marginOnly" value="margin:  const EdgeInsets.only($var$)" description="nb_marginOnly" toReformat="false" toShortenFQNames="true">
+  <template name="nbui_marginOnly" value="margin:  EdgeInsets.only($var$)" description="nb_marginOnly" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
@@ -37,7 +37,7 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="nbui_TextField_templates" value="TextField(&#10;                              maxLength: $length$,&#10;                              //隐藏计算器&#10;                              buildCounter: (BuildContext context,&#10;                                  {int? currentLength,&#10;                                    int? maxLength,&#10;                                    bool? isFocused}) =&gt;&#10;                              null,&#10;                              onChanged: (value) {&#10;&#10;                              },&#10;                              style: const TextStyle(&#10;                                fontSize: $size$,&#10;                              ),&#10;                              decoration: InputDecoration(&#10;                              contentPadding:const EdgeInsets.all(0),&#10;                                hintText: $placeholder$,&#10;                                hintStyle: const TextStyle(color: Colors.grey),&#10;                                border:const OutlineInputBorder(&#10;                            borderSide: BorderSide.none&#10;                        ),&#10;                              ),&#10;                            )," description="" toReformat="false" toShortenFQNames="true">
+  <template name="nbui_TextField_templates" value="TextField(&#10;                              maxLength: $length$,&#10;                              //隐藏计算器&#10;                              buildCounter: (BuildContext context,&#10;                                  {int? currentLength,&#10;                                    int? maxLength,&#10;                                    bool? isFocused}) =&gt;&#10;                              null,&#10;                              onChanged: (value) {&#10;&#10;                              },&#10;                              style: TextStyle(&#10;                                fontSize: $size$,&#10;                              ),&#10;                              decoration: InputDecoration(&#10;                              contentPadding:const EdgeInsets.all(0),&#10;                                hintText: $placeholder$,&#10;                                hintStyle: const TextStyle(color: Colors.grey),&#10;                                border:const OutlineInputBorder(&#10;                            borderSide: BorderSide.none&#10;                        ),&#10;                              ),&#10;                            )," description="" toReformat="false" toShortenFQNames="true">
     <variable name="length" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="size" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="placeholder" expression="" defaultValue="" alwaysStopAt="true" />
@@ -50,6 +50,14 @@
     <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="length" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="item" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_GridView_count" value="GridView.count(&#10;      crossAxisCount: $count$, // 每行显示的子组件数量&#10;      crossAxisSpacing: $space$, // 子组件在水平方向的间距&#10;      mainAxisSpacing: $space$, // 子组件在垂直方向的间距&#10;      children: List.generate($count$, (index) {&#10;        return $widget$;&#10;      }),&#10;    )" description="GridView.count(       crossAxisCount: $count$, // 每行显示的子组件数量       crossAxisSpacing: $space$, // 子组件在水平方向的间距       mainAxisSpacing: $space$, // 子组件在垂直方向的间距       children: List.generate($count$, (index) {         return $widget$;       }),     )" toReformat="false" toShortenFQNames="true">
+    <variable name="count" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="space" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="widget" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
