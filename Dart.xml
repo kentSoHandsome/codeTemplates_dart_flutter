@@ -62,4 +62,16 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="nbui_factory" value="static final $classname$ _instance = $classname$._internal();&#10;&#10;  factory $classname$() {&#10;    return _instance;&#10;  }&#10;&#10;  $classname$._internal();" description="单例实现代码" toReformat="false" toShortenFQNames="true">
+    <variable name="classname" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="nbui_notify_class" value="class &lt;$className$&gt; {&#10;  static final &lt;$className$&gt; _instance = &lt;$className$&gt;._internal();&#10;&#10;  factory &lt;$className$&gt;() {&#10;    return _instance;&#10;  }&#10;&#10;  &lt;#className#&gt;._internal();&#10;&#10;  final StreamController&lt;void&gt; _communicationStreamController = StreamController&lt;void&gt;.broadcast();&#10;&#10;  Stream&lt;void&gt; get communicationStream =&gt; _communicationStreamController.stream;&#10;&#10;  void sendCommunication() {&#10;    _communicationStreamController.sink.add('');&#10;  }&#10;&#10;  void dispose() {&#10;    _communicationStreamController.close();&#10;  }&#10;}" description="创建一个通知类示例" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
